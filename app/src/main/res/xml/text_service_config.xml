@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeAllMask"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagDefault"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/accessibility_description"
+    android:notificationTimeout="10" />
+<!--accessibilityEventTypes:响应那种类型的事件-->
+    <!--accessibilityFeedbackType:用什么方式反馈给用户-->
+    <!--notificationTimeout:响应时间-->
+    <!--packageNames:指定响应哪个应用的事件。如果不填则是响应所有的应用事件（如果以后写抢红包的辅助功能，可以只写微信的包名）-->
+    <!--description：辅助服务的描述信息。-->
+
