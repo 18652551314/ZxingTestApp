@@ -11,7 +11,7 @@ public class BuildBean {
     private double height;
     private double weight;
 
-    BuildBean(Builder builder) {
+    public BuildBean(Builder builder) {
         this.name=builder.name;
         this.age=builder.age;
         this.height=builder.height;

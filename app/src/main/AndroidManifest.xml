@@ -31,26 +31,26 @@
         <activity android:name="com.example.android.socket.client.SocketActivity" />
         <activity android:name="com.example.android.glide.GlideActivity" />
         <activity android:name="com.example.android.rxjava.RxJavaActivity" />
-        <activity android:name="com.example.android.recycleview.RecycleViewActivity"></activity>
-        <activity android:name="com.example.android.persentlib.PersentActivity">
-
-        </activity>
-        <activity android:name="com.example.android.eventbus.EventBusActivity"></activity>
-
+        <activity android:name="com.example.android.recycleview.RecycleViewActivity" />
+        <activity android:name="com.example.android.persentlib.PersentActivity"></activity>
+        <activity android:name="com.example.android.eventbus.EventBusActivity" />
         <activity
             android:name="com.example.android.threadpool.Main"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
+
+        </activity>
+        <activity
+            android:name="com.example.android.threadpool.MyRunnableActivity"
+            android:label="@string/app_name"></activity>
+        <activity android:name="com.example.android.screen.ScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.android.threadpool.MyRunnableActivity"
-            android:label="@string/app_name" >
-
-        </activity>
+        <activity android:name="com.example.android.screen.NormalActivity"/>
+        <activity android:name="com.example.android.screen.RudeActivity"/>
     </application>
 
 </manifest>
