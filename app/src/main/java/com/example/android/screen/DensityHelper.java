@@ -5,9 +5,11 @@ import android.app.Application;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.WindowManager;
 
 import java.lang.reflect.Field;
@@ -32,10 +34,16 @@ public class DensityHelper {
             return;
 
         Point size = new Point();
-        ((WindowManager)context.getSystemService(WINDOW_SERVICE)).getDefaultDisplay().getSize(size);
-
+//        ((WindowManager)context.getSystemService(WINDOW_SERVICE)).getDefaultDisplay().getSize(size);
+        WindowManager wm = (WindowManager)context.getSystemService(WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
         Resources resources = context.getResources();
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
+            display.getSize(size);
+        }else {
+            size.x = display.getWidth();
+            size.y = display.getHeight();
+        }
         resources.getDisplayMetrics().xdpi = size.x/designWidth*72f;
 
         //解决MIUI更改框架导致的MIUI7+Android5.1.1上出现的失效问题(以及极少数基于这部分miui去掉art然后置入xposed的手机)
@@ -52,7 +60,21 @@ public class DensityHelper {
 
         }
     }
-
+//    public final static float DESIGN_WIDTH = 750;
+//    //更改DisplayMetrics为我们想要的与屏幕宽度相关的比例
+//    public void resetDensity(){
+//        Point size = new Point();
+//        WindowManager wm = (WindowManager)getSystemService(Context.WINDOW_SERVICE);
+//        Display display = wm.getDefaultDisplay();
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
+//            display.getSize(size);
+//        }else {
+//            size.x = display.getWidth();
+//            size.y = display.getHeight();
+//        }
+//        Log.e("SK","size,x:"+size.x+",y:"+size.y);
+//        getResources().getDisplayMetrics().xdpi = size.x/DESIGN_WIDTH*72f;
+//    }
     /**
      * 恢复displayMetrics为系统原生状态，单位pt恢复为长度单位磅
      * @see #inactivate()
