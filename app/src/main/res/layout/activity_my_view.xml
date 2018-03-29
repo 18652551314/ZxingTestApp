@@ -1,0 +1,17 @@
+<!-- 我的adt版本是v22.6.2-1085508，它支持自动找寻和验证declare-styleable；如果你的adt不支持此功能，请换成 -->
+<!-- xmlns:myView="http://schemas.android.com/apk/org.xiaom.customView.myView",此处我没验证 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 类全名 -->
+
+    <com.example.android.titleview.MyView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        myView:img="@drawable/icon_consultation"
+        myView:text="自定义Text" />
+</LinearLayout>
