@@ -46,10 +46,7 @@ public class OrgJSONTest {
         JSONObject obj = null;//最外层的JSONObject对象
         try {
             obj = new JSONObject(json);
-
-
             JSONArray array = obj.getJSONArray("user");
-
             for (int i = 0; i < array.length(); i++) {
                 JSONObject user = array.getJSONObject(i);//索引值，获取数组中包含的值
                 String name = user.getString("name");

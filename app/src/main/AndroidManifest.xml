@@ -54,18 +54,23 @@
         <activity
             android:name="com.example.android.threadpool.MyRunnableActivity"
             android:label="@string/app_name" />
-        <activity android:name="com.example.android.screen.ScreenActivity"></activity>
+        <activity android:name="com.example.android.screen.ScreenActivity" />
         <activity android:name="com.example.android.screen.NormalActivity" />
         <activity android:name="com.example.android.screen.RudeActivity" />
         <activity android:name="com.example.android.mvc.MVCActivity" />
-        <activity android:name="com.example.android.handlethread.HandlerThreadActivity">
-
+        <activity android:name="com.example.android.handlethread.HandlerThreadActivity" />
+        <activity android:name="com.example.android.titleview.MyViewActivity"></activity>
+        <activity android:name="com.example.android.activityoptions.FirstActivity">
         </activity>
-        <activity android:name="com.example.android.titleview.MyViewActivity">  <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name="com.example.android.activityoptions.SecondActivity" />
+        <activity android:name="com.example.android.activityoptions.ThirdActivity"></activity>
+        <activity android:name="com.example.android.inputmethod.InputActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
