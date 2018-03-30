@@ -60,11 +60,13 @@
         <activity android:name="com.example.android.mvc.MVCActivity" />
         <activity android:name="com.example.android.handlethread.HandlerThreadActivity" />
         <activity android:name="com.example.android.titleview.MyViewActivity"></activity>
-        <activity android:name="com.example.android.activityoptions.FirstActivity">
-        </activity>
+        <activity android:name="com.example.android.activityoptions.FirstActivity"></activity>
         <activity android:name="com.example.android.activityoptions.SecondActivity" />
         <activity android:name="com.example.android.activityoptions.ThirdActivity"></activity>
         <activity android:name="com.example.android.inputmethod.InputActivity">
+
+        </activity>
+        <activity android:name="com.example.android.goods.GoodsListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
